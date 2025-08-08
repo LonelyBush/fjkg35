@@ -1,19 +1,21 @@
-import type { ChangeEventHandler } from 'react';
 import styles from './input.module.css';
 
 interface InputProps {
   placeholder: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
-  value: string;
+  label: string;
+  name: string;
+  type: 'number' | 'text';
 }
-export const Input = ({ placeholder, onChange, value }: InputProps) => {
+export const Input = ({ placeholder, label, name, type }: InputProps) => {
   return (
-    <input
-      className={styles.inputStyles}
-      type="text"
-      placeholder={placeholder}
-      onChange={onChange}
-      value={value}
-    />
+    <label>
+      {label}
+      <input
+        name={name}
+        className={styles.inputStyles}
+        type={type}
+        placeholder={placeholder}
+      />
+    </label>
   );
 };

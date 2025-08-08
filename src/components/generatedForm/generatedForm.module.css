@@ -1,0 +1,15 @@
+.generatedContainer{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px;
+    width: 100%;
+}
+.generatedFormContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
